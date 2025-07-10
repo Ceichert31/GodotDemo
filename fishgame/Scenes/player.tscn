@@ -193,7 +193,7 @@ autoplay = "Idle"
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_ebmjs")
 
-[node name="CyoteTimer" type="Timer" parent="."]
+[node name="CoyoteTimer" type="Timer" parent="."]
 wait_time = 0.03
 
-[connection signal="timeout" from="CyoteTimer" to="." method="_on_cyote_timer_timeout"]
+[connection signal="timeout" from="CoyoteTimer" to="." method="_on_cyote_timer_timeout"]
