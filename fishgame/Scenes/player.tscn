@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://ckdsfxbrvpa3f"]
+[gd_scene load_steps=27 format=3 uid="uid://ckdsfxbrvpa3f"]
 
 [ext_resource type="Script" uid="uid://jfnbxdar4s8y" path="res://Scripts/InputController.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://c35vipnqhisoq" path="res://Assets/sprites/knight.png" id="1_v0iea"]
+[ext_resource type="AudioStream" uid="uid://c5orkjt4vc2sj" path="res://Assets/sounds/jump.wav" id="2_6t5aa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qxrlw"]
 atlas = ExtResource("1_v0iea")
@@ -175,6 +176,11 @@ radius = 6.0
 z_index = 5
 collision_layer = 2
 script = ExtResource("1_cvnsp")
+
+[node name="JumpSFX" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, -12)
+stream = ExtResource("2_6t5aa")
+bus = &"Sound Effects"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
