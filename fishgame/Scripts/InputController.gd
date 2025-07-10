@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 			coyote_timer.start()
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor() || Input.is_action_just_pressed("jump") && hasCoyoteTime:
+	if Input.is_action_just_pressed("jump") and is_on_floor() || Input.is_action_just_pressed("jump") && is_on_floor() && hasCoyoteTime:
 		velocity.y = JUMP_VELOCITY
 		jump_sfx.play()
 
